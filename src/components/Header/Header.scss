@@ -1,0 +1,29 @@
+header {
+  background-color: #222831;
+  height: 132px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    width: 150px;
+    cursor: pointer;
+  }
+
+  ul {
+    display: flex;
+    gap: 48px;
+    li {
+      color: #eeeeee;
+      font-size: 18px;
+      font-weight: 400;
+      list-style: none;
+      cursor: pointer;
+      width: 90px;
+      text-align: center;
+      &:hover{
+        font-weight: 700;
+      }
+    }
+  }
+}
