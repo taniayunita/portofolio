@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 
@@ -25,12 +25,12 @@ import ImageMail from "../../assets/images/mail.png";
 import SendIcon from "../../assets/icons/send.png";
 
 const Home = () => {
+  const [activeMenu, setActiveMenu] = useState(true);
   return (
-    <div className="container">
+    <div className="">
       <Header />
-      <div className="divider"></div>
       <main>
-        <section className="home">
+        <section className="home" id="Home">
           <div className="content-left">
             <img src={ImageHomeLeft} alt="" className="image-arrow" />
             <div className="title">
@@ -49,12 +49,12 @@ const Home = () => {
             <img src={ImageHomeRight} alt="ilustration" />
           </div>
         </section>
-        <section className="about">
+        <section className="about" id="About-me">
           <div className="content-left">
             <img src={ImageSong} alt="" className="top" />
             <div className="mid">
               <div>
-                <p>
+                <p className="title">
                   About <span>me</span>
                 </p>
                 <img src={ImageLamp} alt="" />
@@ -72,7 +72,7 @@ const Home = () => {
             <img src={ImageAboutRight} alt="illustration" />
           </div>
         </section>
-        <section className="showcase">
+        <section className="showcase" id="Showcase">
           <p>
             My Recent <span>Projects</span>
           </p>
@@ -94,7 +94,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="contact">
+        <section className="contact" id="Contact">
           <div className="content-left">
             <p>
               Got a project in <span>mind?</span>
@@ -126,7 +126,6 @@ const Home = () => {
           </div>
         </section>
       </main>
-      <div className="divider"></div>
       <Footer />
     </div>
   );

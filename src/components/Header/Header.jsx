@@ -9,27 +9,33 @@ const Header = () => {
     {
       name: "Home",
       icon: "About Me",
+      path: "#Home",
     },
     {
       name: "About me",
       icon: "About Me",
+      path: "#About-me",
     },
     {
       name: "Showcase",
       icon: "",
+      path: "#Showcase",
     },
     {
       name: "Contact",
       icon: "",
+      path: "#Contact",
     },
   ];
 
   return (
-    <header>
+    <header className="sticky">
       <img src={LogoFull} alt="TaniaCode" className="logo" />
       <ul>
         {menus.map((item, index) => (
-          <li key={index}>{item.name}</li>
+          <li key={index}>
+            <a href={item.path}>{item.name}</a>
+          </li>
         ))}
       </ul>
     </header>

@@ -1,9 +1,16 @@
+.sticky {
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
 header {
   background-color: #222831;
-  height: 132px;
+  height: 110px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #eeeeee;
+  padding: 0 5vw;
 
   .logo {
     width: 150px;
@@ -12,17 +19,25 @@ header {
 
   ul {
     display: flex;
-    gap: 48px;
+    gap: 30px;
     li {
-      color: #eeeeee;
-      font-size: 18px;
-      font-weight: 400;
+      a {
+        color: #eeeeee;
+        font-size: 18px;
+        font-weight: 400;
+        text-decoration: none;
+      }
+
       list-style: none;
       cursor: pointer;
-      width: 90px;
+      // width: 90px;
+      padding: 8px 18px;
       text-align: center;
-      &:hover{
-        font-weight: 700;
+      transition: 0.8s;
+      border-radius: 20px;
+      &:hover {
+        background-color: rgba(175, 175, 175, 0.336);
+        transition: 0.8s;
       }
     }
   }
